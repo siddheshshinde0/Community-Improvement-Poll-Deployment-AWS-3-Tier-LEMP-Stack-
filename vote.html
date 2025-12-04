@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community Improvement Poll</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .header {
+      text-align: center;
+      padding: 30px 10px;
+      background: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .subtext {
+      font-size: 15px;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .option-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #e2e2e2;
+      cursor: pointer;
+      transition: 0.2s ease;
+      position: relative;
+    }
+
+    .option-card:hover {
+      border-color: #888;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .option-card input {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    button {
+      margin-top: 35px;
+      width: 100%;
+      padding: 14px;
+      font-size: 17px;
+      font-weight: 600;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      background: #222;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Community Improvement Poll</h1>
+    <p class="subtext">Select the issue that should be addressed first in our community.</p>
+  </div>
+
+  <div class="container">
+    <form action="submit_vote.php" method="post">
+      <div class="options-grid">
+
+        <label class="option-card">
+          <div class="title">🚺 Women Safety & Street Lighting</div>
+          <div class="desc">Improving lighting, CCTV coverage and safer public spaces.</div>
+          <input type="radio" name="vote" value="Women Safety" required>
+        </label>
+
+        <label class="option-card">
+          <div class="title">🚦 Road Safety & Traffic Discipline</div>
+          <div class="desc">Reducing accidents, improving signage and traffic awareness.</div>
+          <input type="radio" name="vote" value="Road Safety" required>
+        </label>
+
+        <label class="option-card">
+          <div class="title">💧 Clean & Safe Drinking Water</div>
+          <div class="desc">Ensuring purified, accessible drinking water for all.</div>
+          <input type="radio" name="vote" value="Clean Water" required>
+        </label>
+
+        <label class="option-card">
+          <div class="title">🗑️ Waste Management & Recycling</div>
+          <div class="desc">Better garbage collection, segregation & eco-friendly disposal.</div>
+          <input type="radio" name="vote" value="Waste Management" required>
+        </label>
+
+        <label class="option-card">
+          <div class="title">🌳 Tree Plantation & Green Spaces</div>
+          <div class="desc">Creating greener neighborhoods and improving air quality.</div>
+          <input type="radio" name="vote" value="Tree Plantation" required>
+        </label>
+
+        <label class="option-card">
+          <div class="title">🧠 Mental Health Awareness</div>
+          <div class="desc">Workshops, counseling access and community support.</div>
+          <input type="radio" name="vote" value="Mental Health" required>
+        </label>
+
+      </div>
+
+      <button type="submit">Submit Your Vote</button>
+    </form>
+  </div>
+
+</body>
+</html>
